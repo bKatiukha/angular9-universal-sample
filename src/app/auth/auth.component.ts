@@ -14,12 +14,12 @@ interface IRoute {
 export class AuthComponent {
   routes: IRoute[] = [
     {
-      link: ['/auth', 'login'],
+      link: ['/ru', 'auth', 'login'],
       text: 'Login page',
       title: ''
     },
     {
-      link: ['/auth', 'registration'],
+      link: ['/ru', 'auth', 'registration'],
       text: 'Registration page',
       title: ''
     }

@@ -20,6 +20,7 @@ import { TokenInterceptor } from '@shared/interceptors/token.interceptor';
 import { ErrorInterceptor } from '@shared/interceptors/error.interceptor';
 import { AuthGuard } from '@shared/guards/auth.guard';
 import { UnAuthGuard } from '@shared/guards/un-auth.guard';
+import {LangGuard} from '@shared/guards/lang-guard.service';
 
 export function initLanguage(translateService: TranslatesService): Function {
   return (): Promise<any> => translateService.initLanguage();
@@ -44,6 +45,7 @@ export function initLanguage(translateService: TranslatesService): Function {
     // Guards
     AuthGuard,
     UnAuthGuard,
+    LangGuard,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: APP_INITIALIZER, useFactory: initLanguage, multi: true, deps: [TranslatesService] },
