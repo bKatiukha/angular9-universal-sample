@@ -5,12 +5,12 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { HeaderComponent } from './header/header.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, TranslateModule],
-  declarations: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent],
-  exports: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent],
+  declarations: [FooterComponent, SidebarComponent, HeaderComponent, WrapperComponent],
+  exports: [FooterComponent, SidebarComponent, HeaderComponent, WrapperComponent],
 })
 export class LayoutsModule {}

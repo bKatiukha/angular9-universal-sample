@@ -13,8 +13,9 @@ import { ILang } from './translates.interface';
 import { UniversalStorage } from '@shared/storage/universal.storage';
 
 const LANG_LIST: ILang[] = [
-  { code: 'ru', name: 'Русский', culture: 'ru-RU' },
   { code: 'en', name: 'English', culture: 'en-US' },
+  { code: 'pl', name: 'Poland', culture: 'pl_PL' },
+  { code: 'ua', name: 'Українська', culture: 'uk_UA' },
 ];
 const LANG_DEFAULT: ILang = LANG_LIST[0];
 const STORAGE_LANG_NAME: string = 'langCode';

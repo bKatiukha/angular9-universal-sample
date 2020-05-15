@@ -21,6 +21,7 @@ import { ErrorInterceptor } from '@shared/interceptors/error.interceptor';
 import { AuthGuard } from '@shared/guards/auth.guard';
 import { UnAuthGuard } from '@shared/guards/un-auth.guard';
 import {LangGuard} from '@shared/guards/lang-guard.service';
+import {CoreModule} from './core/core.module';
 
 export function initLanguage(translateService: TranslatesService): Function {
   return (): Promise<any> => translateService.initLanguage();
@@ -34,6 +35,7 @@ export function initLanguage(translateService: TranslatesService): Function {
     RouterModule,
     AppRoutes,
     BrowserAnimationsModule,
+    CoreModule,
     CookieModule.forRoot(),
     SharedModule.forRoot(),
   ],
